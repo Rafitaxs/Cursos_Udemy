@@ -1,0 +1,159 @@
+/**
+Al escribir el código CSS, se recomienda usar unidades relativas como rem o em en lugar de px. 
+para dar mayor flexibilidad y adaptabilidad a diferentes tamaños de pantalla y configuraciones de usuario.
+los identificadores y clases deben ser descriptivos y significativos para facilitar la comprensión del código.
+Además, es importante mantener una estructura clara 
+y organizada en el código CSS, utilizando comentarios para explicar secciones o reglas específicas.
+los identificadores de las clases se inician con un punto (.) y los identificadores de los id con un numeral (#).
+Además, se recomienda utilizar un sistema de nombres coherente y legible para facilitar la colaboración y el mantenimiento del código.
+el span se utiliza para aplicar estilos a una parte específica del texto dentro de un elemento,
+sin afectar el resto del contenido.
+
+**/
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --fuente-principal: 3.8 rem;
+}
+
+html {
+    font-size: 62.5;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'krub', sans-serif;
+}
+
+h1 {
+    font-size: 3.8rem;
+
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+.titulo span {
+    font-size: 3.8rem;
+
+}
+
+.contenedor {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .9rem;
+    width: 80%;
+    text-align: center;
+}
+@media(min-width: 480px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.navegacion-principal a:focus {
+    background-color: var(--blanco);
+}
+
+@media (min-width: 480px) {
+    h1 {}
+}
+
+@media (min-width: 768px) {
+    h1 {}
+}
+
+.hero {
+    background-image: url(towers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    /** Metodo anterior **/
+    background-color: rgb(0 0 0 / 0%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;    
+
+}
