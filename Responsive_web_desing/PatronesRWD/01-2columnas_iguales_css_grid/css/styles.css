@@ -39,3 +39,12 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media(max-width: 1536px){
+    .dos-columnas {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 4rem;
+
+    }
+}
